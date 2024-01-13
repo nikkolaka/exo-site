@@ -2,11 +2,7 @@
 use serde::Deserialize;
 use yew::prelude::*;
 
-const FLOAT_DEFAULT : f64 = -1.0 as f64;
 
-fn float_default() -> f64 {
-    FLOAT_DEFAULT
-}
 
 
 #[derive(Deserialize, Clone, PartialEq)]
