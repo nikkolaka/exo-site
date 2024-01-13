@@ -1,0 +1,2 @@
+[[proxy]]
+backend = "https://crossorigin.me/"
