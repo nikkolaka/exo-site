@@ -37,7 +37,7 @@ jobs:
         run: |
           rustup target add wasm32-unknown-unknown
       - name: Build the Rust WASM app and all of its assets
-        run: trunk build --public-url ${{ github.event.repository.name }} --release --proxy-backend=https://exoplanetarchive.ipac.caltech.edu/TAP/
+        run: trunk build --public-url ${{ github.event.repository.name }} --release
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
