@@ -19,6 +19,7 @@ pub fn app() -> Html {
             wasm_bindgen_futures::spawn_local(async move{
                 let fetched_planets: Vec<Planet> = Request::get("TAP/sync?query=select+pl_name,pl_bmassj,pl_rade,pl_insol+from+ps+where+default_flag=1&format=json")
                 .header("Access-Control-Allow-Origin", "*")
+                .header("mode", "no-cors")
                 .send()
                 .await
                 .unwrap()
