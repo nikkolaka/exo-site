@@ -1,2 +1,2 @@
 [[proxy]]
-backend = "https://crossorigin.me/"
+backend = "https://exoplanetarchive.ipac.caltech.edu/TAP/"

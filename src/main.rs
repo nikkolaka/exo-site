@@ -17,7 +17,7 @@ pub fn app() -> Html {
         let planets = planets.clone();
         use_effect_with((), move |_| {
             wasm_bindgen_futures::spawn_local(async move{
-                let fetched_planets: Vec<Planet> = Request::get("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,pl_bmassj,pl_rade,pl_insol+from+ps+where+default_flag=1&format=json")
+                let fetched_planets: Vec<Planet> = Request::get("TAP/sync?query=select+pl_name,pl_bmassj,pl_rade,pl_insol+from+ps+where+default_flag=1&format=json")
                 .header("Access-Control-Allow-Origin", "*")
                 .send()
                 .await
